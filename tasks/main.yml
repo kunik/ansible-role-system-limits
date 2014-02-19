@@ -1,0 +1,16 @@
+- name: install ulimits.conf
+  sudo: true
+  template: >
+    src=ulimits.conf.j2
+    dest=/etc/security/limits.d/max.conf
+    owner=root
+    group=root
+    mode=0644
+
+- name: update sysctl config
+  sudo: true
+  sysctl: >
+    name='{{ item.name }}'
+    value='{{ item.value }}'
+  with_items: system_limits.sysctl
+

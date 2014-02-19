@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Taras Kunch
+  description: Setup ulimits and sysctl
+  company: Rebbix
+  min_ansible_version: 1.4
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - networking
+  - system
+
